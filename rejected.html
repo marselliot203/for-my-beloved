@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>It's Okay</title>
+
+<style>
+body{
+    font-family: Georgia, "Times New Roman", serif;
+    background:#0b1d3a;
+    color:white;
+    text-align:center;
+    padding-top:100px;
+}
+
+img{
+    width:250px;
+    border-radius:20px;
+}
+
+p{
+    width:60%;
+    margin:auto;
+    font-size:18px;
+}
+
+button{
+    margin-top:30px;
+    padding:12px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#4CAF50;
+    color:white;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<audio autoplay loop>
+  <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<h1>Hmm... 😅</h1>
+
+<img src="foto1.jpg">
+
+<p>
+Maybe you pressed the wrong button.
+Let's try that again.
+</p>
+
+<button onclick="tryAgain()">Try Again</button>
+
+<script>
+function tryAgain(){
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

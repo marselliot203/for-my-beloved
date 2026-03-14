@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>You Said Yes!</title>
+
+<style>
+
+body{
+margin:0;
+font-family: Georgia, "Times New Roman", serif;
+color:white;
+text-align:center;
+text-shadow:1px 1px 4px rgba(0,0,0,0.6);
+overflow:hidden;
+}
+
+.background{
+position:fixed;
+width:100%;
+height:100%;
+background-image:url("Braga.jpg");
+background-size:cover;
+background-position:center;
+filter:blur(1px);
+z-index:-2;
+}
+
+.overlay{
+position:fixed;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+z-index:-1;
+}
+
+.content{
+padding-top:70px;
+}
+
+h1{
+font-size:42px;
+text-shadow:0 0 10px rgba(255,255,255,0.7),
+0 0 20px rgba(255,255,255,0.4);
+}
+
+img{
+width:260px;
+border-radius:20px;
+margin-top:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.text{
+width:60%;
+margin:auto;
+font-size:18px;
+margin-top:20px;
+background:rgba(0,0,0,0.45);
+padding:25px;
+border-radius:15px;
+}
+
+/* animasi hati */
+
+.heart{
+position:fixed;
+top:-10px;
+color:#ff6b81;
+font-size:20px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-10px);
+opacity:1;
+}
+100%{
+transform:translateY(100vh);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+<div class="overlay"></div>
+
+<audio autoplay loop>
+<source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<div class="content">
+
+<h1>You said YES 💙</h1>
+
+<img src="foto2.jpg">
+
+<div class="text">
+<p>
+I honestly didn’t know if you would say yes or not,
+but I'm really happy that you opened this page.
+
+From the first time I talked to you,
+there was something about you that made me smile.
+
+Being around you feels easy and comfortable,
+and I really hope this can be the beginning of something special.
+
+Maybe we will laugh together,
+maybe we will create a lot of memories together,
+and maybe this will be one of those moments
+we remember later and smile about.
+
+But for now, I'm just really happy
+that you said yes.
+</p>
+</div>
+
+</div>
+
+<script>
+
+/* bikin hati jatuh */
+
+function createHeart(){
+
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>

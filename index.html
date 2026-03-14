@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A Question For You</title>
+
+<style>
+body{
+    font-family: Arial;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    text-align:center;
+    padding-top:120px;
+    color:white;
+}
+
+.box{
+    background:rgba(0,0,0,0.2);
+    padding:40px;
+    border-radius:20px;
+    display:inline-block;
+}
+
+button{
+    padding:12px 30px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.yes{
+    background:#4CAF50;
+    color:white;
+}
+
+.no{
+    background:#f44336;
+    color:white;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+<h1>Hey, [Nama Dia]</h1>
+<p>I made this little website just to ask you something...</p>
+
+<h2>Will you be my boyfriend? ❤️</h2>
+
+<button class="yes" onclick="accept()">Yes ❤️</button>
+<button class="no" onclick="reject()">No 💔</button>
+</div>
+
+<script>
+function accept(){
+    window.location.href = "accepted.html";
+}
+
+function reject(){
+    window.location.href = "rejected.html";
+}
+</script>
+
+</body>
+</html>
